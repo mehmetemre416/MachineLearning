@@ -6,14 +6,14 @@ makine öğrenmesi yöntemleri ile modellenmesini amaçlamaktadır.
 problemleri ele alınmış; SO₂ ve NO₂ gibi temel hava kirleticileri üzerinden
 tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference[oaicite:0]{index=0}
 
-## 📌 Proje Kapsamı
+## Proje Kapsamı
 - Hava kirliliği verilerinin keşifsel analizi
 - Veri temizleme ve ön işleme adımları
 - Regresyon ve sınıflandırma modellerinin eğitilmesi
 - Farklı model ailelerinin performanslarının karşılaştırılması
 - Sonuçların literatür ile ilişkilendirilerek yorumlanması :contentReference[oaicite:1]{index=1}
 
-## 📊 Veri Seti
+## Veri Seti
 - **Kaynak:** Kaggle – *India Air Quality Data*
 - **İçerik:**
   - Tarih bilgisi (date)
@@ -23,7 +23,7 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
 - Yüksek oranda eksik değer içeren RSPM, SPM ve PM2.5 sütunları
   temel modellemede kapsam dışı bırakılmıştır. :contentReference[oaicite:2]{index=2}
 
-## ⚙️ Ön İşleme Adımları
+## Ön İşleme Adımları
 - Eksik değerlerin **medyan ile doldurulması**
 - Tarih bilgisinden **year** ve **month** değişkenlerinin türetilmesi
 - Kategorik değişkenlerin kodlanması
@@ -31,7 +31,7 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
 - Sınıflandırma probleminde sınıf dengesizliği için
   **class_weight="balanced"** yaklaşımının kullanılması :contentReference[oaicite:3]{index=3}
 
-## 🎯 Problem Tanımları
+## Problem Tanımları
 ### Regresyon
 - **Hedef:** NO₂ (alternatif olarak SO₂) konsantrasyonunun sayısal tahmini
 - **Metrikler:** RMSE, MAE, R²
@@ -42,7 +42,7 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
   - `0` → Aksi halde
 - **Metrikler:** Accuracy, Precision, Recall, F1-score :contentReference[oaicite:4]{index=4}
 
-## 🧠 Kullanılan Modeller
+## Kullanılan Modeller
 ### Regresyon
 - Linear Regression (Normal Denklem & Gradient Descent)
 - KNN Regressor
@@ -58,7 +58,7 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
 - HistGradientBoostingClassifier
 - AdaBoost :contentReference[oaicite:5]{index=5}
 
-## 📈 Sonuçlar (Özet)
+## Sonuçlar (Özet)
 - **Regresyon:**  
   - RMSE ve R² açısından en iyi performans **Random Forest** modeliyle elde edilmiştir.
   - MAE metriğinde **Linear SVR** en düşük hatayı üretmiştir.
@@ -67,13 +67,13 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
   - **Logistic Regression (balanced)** ve **Linear SVC**, pozitif sınıf için en yüksek
     **recall** ve **F1-score** değerlerini üretmiştir. :contentReference[oaicite:6]{index=6}
 
-## 📁 Klasör Yapısı
+## Klasör Yapısı
 - `notebooks/` → Tüm Jupyter Notebook dosyaları
 - `data/` → Veri seti ve ön işlenmiş veriler
 - `results/` → Grafikler ve performans tabloları
 - `report/` → Final proje raporu (PDF)
 
-## ▶️ Çalıştırma
+## Çalıştırma
 ```bash
 pip install -r requirements.txt
 jupyter notebook
