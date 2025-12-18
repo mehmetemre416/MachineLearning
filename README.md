@@ -3,25 +3,25 @@
 Bu proje, **India Air Quality Data** veri seti kullanılarak hava kalitesinin
 makine öğrenmesi yöntemleri ile modellenmesini amaçlamaktadır.
 Çalışma kapsamında hem **regresyon** hem de **ikili sınıflandırma**
-problemleri ele alınmış; SO₂ ve NO₂ gibi temel hava kirleticileri üzerinden
-tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference[oaicite:0]{index=0}
+problemleri ele alınmış; **SO₂** ve **NO₂** gibi temel hava kirleticileri üzerinden
+tahmin ve sınıflandırma analizleri gerçekleştirilmiştir.
 
 ## Proje Kapsamı
 - Hava kirliliği verilerinin keşifsel analizi
 - Veri temizleme ve ön işleme adımları
 - Regresyon ve sınıflandırma modellerinin eğitilmesi
 - Farklı model ailelerinin performanslarının karşılaştırılması
-- Sonuçların literatür ile ilişkilendirilerek yorumlanması :contentReference[oaicite:1]{index=1}
+- Sonuçların literatür ile ilişkilendirilerek yorumlanması
 
 ## Veri Seti
 - **Kaynak:** Kaggle – *India Air Quality Data*
 - **İçerik:**
   - Tarih bilgisi (date)
   - SO₂ ve NO₂ konsantrasyonları
-  - Bölge tipi (Residential, Industrial, vb.)
-  - İstasyon/şehir bilgileri
-- Yüksek oranda eksik değer içeren RSPM, SPM ve PM2.5 sütunları
-  temel modellemede kapsam dışı bırakılmıştır. :contentReference[oaicite:2]{index=2}
+  - Bölge tipi (Residential, Industrial vb.)
+  - İstasyon / şehir bilgileri
+- Yüksek oranda eksik değer içeren **RSPM, SPM ve PM2.5** sütunları
+  temel modelleme aşamasında kapsam dışı bırakılmıştır.
 
 ## Ön İşleme Adımları
 - Eksik değerlerin **medyan ile doldurulması**
@@ -29,7 +29,7 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
 - Kategorik değişkenlerin kodlanması
 - KNN, SVM ve lineer modeller için **StandardScaler** ile normalizasyon
 - Sınıflandırma probleminde sınıf dengesizliği için
-  **class_weight="balanced"** yaklaşımının kullanılması :contentReference[oaicite:3]{index=3}
+  **class_weight="balanced"** yaklaşımının kullanılması
 
 ## Problem Tanımları
 ### Regresyon
@@ -37,10 +37,10 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
 - **Metrikler:** RMSE, MAE, R²
 
 ### Sınıflandırma
-- **Hedef:**  
-  - `1` → NO₂ ≥ 40 (kötü hava kalitesi)  
+- **Hedef:**
+  - `1` → NO₂ ≥ 40 (kötü hava kalitesi)
   - `0` → Aksi halde
-- **Metrikler:** Accuracy, Precision, Recall, F1-score :contentReference[oaicite:4]{index=4}
+- **Metrikler:** Accuracy, Precision, Recall, F1-score
 
 ## Kullanılan Modeller
 ### Regresyon
@@ -56,7 +56,7 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
 - Linear SVC
 - Random Forest (balanced)
 - HistGradientBoostingClassifier
-- AdaBoost :contentReference[oaicite:5]{index=5}
+- AdaBoost
 
 ## Sonuçlar (Özet)
 - **Regresyon:**  
@@ -65,7 +65,7 @@ tahmin ve sınıflandırma analizleri gerçekleştirilmiştir. :contentReference
 - **Sınıflandırma:**  
   - Accuracy değeri yüksek olsa da sınıf dengesizliği nedeniyle tek başına yeterli değildir.
   - **Logistic Regression (balanced)** ve **Linear SVC**, pozitif sınıf için en yüksek
-    **recall** ve **F1-score** değerlerini üretmiştir. :contentReference[oaicite:6]{index=6}
+    **recall** ve **F1-score** değerlerini üretmiştir.
 
 ## Klasör Yapısı
 - `notebooks/` → Tüm Jupyter Notebook dosyaları
